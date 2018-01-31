@@ -1,0 +1,449 @@
+@charset "UTF-8";
+/*portfolio website styles*/
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"TIFAX"; /* title text */
+    src:url("TIFAX_text.eot?") format("eot");
+    src:local("TIFAX"), local("TIFAX-Alpha"),
+    url("TIFAX_text.woff") format("woff"),
+    url("TIFAX_text.ttf") format("truetype"),
+    url("TIFAX_text.svg#TIFAX-Alpha");
+    format("svg");
+    font-weight:normal;
+    font-style:normal;
+    }
+
+@font-face { /* main body text */
+    font-family:"TeleTekst";
+    src:local("TeleTekst");
+    src:url("TeleTekst.eot?") format("eot"),
+    url("TeleTekst.woff") format("woff"),
+    url("TeleTekst.ttf") format("truetype"),
+    url("TeleTekst.svg#TeleTekst") ;format("svg");
+    font-weight:normal;
+    font-style:normal;
+    }
+
+body {
+    background:#000;
+    box-sizing:border-box;
+    max-width:100%;
+    color:#fff;
+    text-align:center;
+    font-family:"TIFAX";
+    font-weight:normal;
+    font-style:normal;
+    }
+
+.wrapper {
+    max-width:1000px;
+    margin:0 auto;
+    }
+
+.clock {
+    display:inline;
+    color:#fff;
+    }
+
+.calendar {
+    display:inline;
+    color:#f3f490;
+    }
+
+a {text-decoration:underline; color:#fff;}
+
+.decolorise {color:#f3f490;}
+
+a:hover {
+    text-decoration:underline; 
+    background:#97F5FB;
+    color:#000;
+    }
+
+nav {
+    margin:0 auto;
+    width:100%;
+    }
+
+.nav-col1 a{color:red;}
+.nav-col1 a:hover {
+    background:red; 
+    color:#000;
+    }
+
+.nav-col2 a{color:#9ef490;}
+.nav-col2 a:hover {
+    background:#9ef490; 
+    color:#000;
+    }
+
+.nav-col3 a{color:#97F5FB;}
+.nav-col3 a:hover {
+    background:#97F5FB; 
+    color:#000;
+    }
+
+.nav-col4 a{color:blue;}
+.nav-col4 a:hover {
+    background:blue; 
+    color:#000;
+    }
+
+h1 {
+    font-size:51px;
+    color:#fff;
+    font-family:"TeleTekst";
+    padding-left:7px;
+    }
+
+@media screen and (min-width:445px){
+h1 {font-size: 74px;}
+}
+
+h2 {
+    font-size:16px; 
+    font-weight:200; 
+    color:#f3f490;
+    }
+
+h3 {
+    font-size:16px; 
+    font-weight:200; 
+    color:#f3f490;; 
+    }
+
+.cv {font-size:63px;}
+
+/*fieldset {
+    border:10px solid blue;
+    margin-top:-20px;
+    display: block;
+    -webkit-margin-start:0px;
+    -webkit-margin-end:0px;
+    -webkit-padding-before:0em;
+    -webkit-padding-start:0em;
+    -webkit-padding-end:0em;
+    -webkit-padding-after:0em;
+    min-width:0px;
+    }
+
+legend {
+    font-size:14px;
+    color:#f3f490;
+    }*/
+
+
+.fieldset {
+    border:10px solid blue;
+    margin-top: -20px;
+    }
+
+.legend {
+    font-size:16px;
+    color:#f3f490;
+    margin-top:-13px;
+    padding:0 20px;
+    background:#000;
+    width:85%;
+    margin:-11px auto;
+    }
+
+@media screen and (min-width:467px){
+    .legend {width:38%;}
+}
+
+/*ANIMATION*/
+.move-up,.move-up2,.move-up3,.move-up3-3,.move-up4 {
+    animation:moveUp ease-in-out 1;
+    animation-fill-mode:forwards;
+    }
+
+.move-up3 {animation-duration:1.5s;}
+
+@keyframes moveUp {
+    0% {transform: translate(0px,10px);}
+    100% {transform: translate(0px,0px);}
+    from {opacity:0;}
+    to   {opacity:1;}
+    } 
+
+ul {
+    list-style-type:none;
+    max-width:100%;
+    margin:0 auto;
+    padding:10px;
+    display:inline-block;
+    }
+
+.header-info {
+    font-size:10.5px;
+    padding:10px 0px 0px 0px;
+    display:inline-flex;
+    justify-content: center;
+    width: 100%;
+    }
+
+.header-info li {padding: 0 1% 0 1%;}
+
+.center-title {
+    background:#97F5FB;
+    color:#000;
+    margin-top:10px;
+    }
+
+.container {
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-rows:auto;
+    text-align:left;
+    justify-content:space-around;
+    line-height:1.6;
+    }
+
+@media screen and (min-width:570px){
+    .container {grid-template-columns:30% 70%;}
+}
+
+@media screen and (min-width:615px){
+    .container {grid-template-columns:40% 60%;}
+}
+
+@media screen and (min-width:714px){
+    .container {grid-template-columns:50% 50%;}
+}
+
+@media screen and (min-width:1024px){
+    .container {grid-template-columns:35% 15% 35% 15%;}
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows:auto;
+    text-align:left;
+    justify-content:space-around;
+    }
+
+.grid-container2 {
+    display:grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows:auto;
+    text-align:left;
+    justify-content:space-around;
+    }
+
+.mid-list li, .mid-list2 li,.mid-list3 li, .mid-list4 li {
+    display:flex;
+    text-align:left;
+    }
+
+.mid-list, .mid-list2, .mid-list3, .mid-list4 {font-size: 16px;}
+
+.numbers, .numbers2 {
+    display:none;
+    justify-self:end;
+    }
+
+@media screen and (min-width:1024px){
+.numbers, .numbers2 {display:flex;}
+}
+
+main {
+    text-align:left;
+    margin-top:20px;
+    font-size:14px;
+    }
+
+.spaceship {
+    letter-spacing:0px;
+    line-height:1.4;
+    }
+
+.index-img {
+    max-width:100%;
+    margin:0 auto;
+    width:35%;
+    }
+
+.image {
+    text-align:center;
+    margin-top:-48px;
+    }
+
+input {
+    -webkit-appearance:textfield;
+    background-color:white;
+    user-select:text;
+    cursor:auto;
+    padding:1px;
+    border-width:0px;
+    height:26px;
+    border-style:inset;
+    border-color:initial;
+    border-image:initial;
+    }
+
+.formfield {text-align: center;}
+
+form {text-align:left;}
+
+input, textarea, select {
+    color:initial;
+    letter-spacing:-2px;
+    word-spacing:normal;
+    text-transform:none;
+    text-indent:5px;
+    text-shadow:none;
+    display:block;
+    width:85%;
+    text-align:start;
+    margin:0 auto;
+    margin-bottom:10px;
+    font-size:11px;
+    font-family:"TIFAX";
+    }
+
+button {
+    height:40px;
+    width:100px;
+    text-align:center;
+    font-size:20px;
+    background:#00f;
+    color:#fff;
+    border:none;
+    font-family:"TIFAX";
+    margin-bottom:10px;
+    }
+
+label {color:#f3f490;}
+
+.msg-red {color:red;}
+
+.hr-bar {
+    background:blue;
+    height:15px;
+    margin-top:5px;
+    }
+
+.lower-third {
+    background:#97F5FB;
+    height:76px;
+    }
+
+.hr-bar2 {
+    background:blue;
+    position:relative;
+    margin-top:50px;
+    left:0px;
+    bottom:40px;
+    height:15px;
+    width:100%;
+    }
+
+.blue {
+    background:#00f; 
+    width:100%; 
+    height:100px;
+    }
+
+.green {
+    background:#9ef490; 
+    color:#000; 
+    width:100%; 
+    height:100px;
+    }
+
+.yellow {
+    background:#f3f490; 
+    color:#000; 
+    width:100%; 
+    height:100px;
+    }
+
+.turq {
+    background:#97f5fb; 
+    color:#000; 
+    width:100%; 
+    height:100px;
+    }
+
+.blue, .green, .yellow, .turq {
+    justify-content:center; 
+    align-self:center;
+    }
+
+.Tifax {
+    font-family:"TIFAX"; 
+    font-size:25px;
+    }
+
+.Teletekst {
+    font-family:"TeleTekst"; 
+    font-size:25px;
+    }
+
+.twitter-t {
+    font-size:45px;
+    color:#000;
+    font-family:"TeleTekst";
+    float:left;
+    padding:15px 0 0 5px;
+    }
+
+.github-g {
+    font-size:45px;
+    color:#000;
+    font-family:"TeleTekst";
+    float:right;
+    padding:15px 5px 0 0;
+    }
+
+.github-g:hover, .twitter-t:hover {
+    color: red;
+    }
+
+.footer-nav {
+    display:inline-flex;
+    max-width:100%;
+    margin:0 auto;
+    padding:0;
+    }
+
+.footer-nav a {padding:0px 22px 0px 22px;}
+
+footer {
+    position:relative;
+    left:0px;
+    bottom:0px;
+    height:40px;
+    width:100%;
+    background:#000;
+    font-size:14.6px;
+    }
+
+.archive {float:right;margin-left:-82px;}
+
+@media screen and (min-width:375px){
+     main {font-size:17px;}
+     footer {font-size:14.6px;}
+    .header-info {font-size:12.5px;}
+    .mid-list li, .mid-list2 li,.mid-list3 li, .mid-list4 li {font-size:20px;}
+    .github-g {padding-right:10px;}
+    .twitter-t {padding-left:10px;}
+    }
+
+@media screen and (min-width:598px){
+    legend {font-size:18px;}
+    h2 {font-size:18px;}
+    .header-info {font-size:16.5px;}
+    .header-info li {padding:0 8% 0 0;}
+    .github-g {padding-right:14%;}
+    .twitter-t {padding-left:12%;}
+    }
+
+
+
+
+    /* Many thanks to https://css-tricks.com/ , https://www.w3schools.com/ , https://codepen.io/ , R.Eskins, D.Wilson, J.Willson, C.Dawson */
+  
